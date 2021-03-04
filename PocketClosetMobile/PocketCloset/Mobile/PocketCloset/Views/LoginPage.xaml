@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketCloset.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterLayout">
+
+            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+                <Image x:Name="LoginIcon" Aspect="AspectFit" Source="LoginIcon.png"  Margin="0,60,0,0"/>
+            </StackLayout>
+
+            <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness" >
+                        <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+                <StackLayout x:Name="activitySpinnerLayout" IsVisible="False" IsEnabled="False">
+                    <ActivityIndicator x:Name="signInLoader" Color="White" IsRunning="False" IsEnabled="False" BackgroundColor="Transparent" IsVisible="False"/>
+                    <Label Text="Please wait..." TextColor="White" Margin="0,60,0,0" HorizontalTextAlignment="Center" FontSize="24" VerticalTextAlignment="End"/>
+                </StackLayout>
+                <StackLayout x:Name="signInLayout">
+                    <Label x:Name="lblUsername" Text="Username"/>
+                    <Entry x:Name="entryUsername" Placeholder="Username"/>
+                    <Label x:Name="lblPassword" Text="Password"/>
+                    <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="True"/>
+                <!--    <Button Text="TEST LOGIN" Clicked="goToNavPage"/>       DELETE WHEN PUSHING -->
+                    <Button x:Name="btnSignIn"  Text="Log In" Clicked="verifyLoginForm"/>
+                    <Button x:Name="btnSignUp"  Text="Sign Up" Clicked="goToSignUpPage"/>
+                    <Button x:Name="btnForgotPassword" BorderColor="Transparent" BackgroundColor="Transparent" Text="Forgot Password? Click here" FontSize="12" Clicked="goToForgotPasswordPage" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StadiumStats.View.AddAthlete">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="MasterLayout">
+
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness" >
+                        <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="LoginIcon.png" HeightRequest="60"  Margin="-5,-5,0,0" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="Add Athlete"  Margin="40,0,0,0" FontAttributes="Bold" FontSize="40" TextColor="Black" FontFamily="MS Gothic"/>
+                </StackLayout>
+                
+                <StackLayout x:Name="Welcome4" Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                    <BoxView x:Name="boxViewSettings" WidthRequest ="200" HeightRequest="2" BackgroundColor="Black"/>
+                </StackLayout>
+
+                <StackLayout x:Name="addAthlete" VerticalOptions="StartAndExpand">
+                    <StackLayout x:Name="activitySpinnerLayout" IsVisible="False" IsEnabled="False">
+                        <ActivityIndicator x:Name="addAthleteSpinner" Color="DarkOrange" IsRunning="False" IsEnabled="False" BackgroundColor="Transparent" IsVisible="False"/>
+                        <Label Text="Please wait..." TextColor="White" Margin="0,60,0,0" HorizontalTextAlignment="Center" FontSize="24" VerticalTextAlignment="End"/>
+                    </StackLayout>
+
+                    <StackLayout x:Name="addAthleteLayout" IsVisible="True" IsEnabled="True">
+                        <ImageButton x:Name="athleteImage" Aspect="AspectFit" BackgroundColor="Transparent"  Source="athleteIcon.png" HorizontalOptions="Center" VerticalOptions="Center" Clicked="uploadAthletePicture" HeightRequest="300" WidthRequest="300"/>
+                        <Entry x:Name="entryFirstName" Placeholder="Athlete First Name" PlaceholderColor="LightGray" TextColor="Black"/>
+                        <Entry x:Name="entryLastName" Placeholder="Athlete Last Name" PlaceholderColor="LightGray" TextColor="Black"/>
+                        <Picker x:Name="athleteType" Title="Select athlete type" TitleColor="LightGray" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Player</x:String>
+                                    <x:String>Goalie</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Button x:Name="btnAddAthlete" Text="Add Athlete" Clicked="addNewAthlete"/>
+                        <Button BorderColor="Transparent" BackgroundColor="Transparent" Text="Back to Home Page" TextColor="Black" FontSize="12" Clicked="goToHomePage"/>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage> 

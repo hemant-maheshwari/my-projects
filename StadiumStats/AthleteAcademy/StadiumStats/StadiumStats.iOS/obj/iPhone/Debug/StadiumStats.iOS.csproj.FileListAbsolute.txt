@@ -1,0 +1,8 @@
+C:\Xamarin\RUSU\StadiumStats\StadiumStats.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Xamarin\RUSU\StadiumStats\StadiumStats.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Xamarin\RUSU\StadiumStats\StadiumStats.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Xamarin\RUSU\StadiumStats\StadiumStats.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Xamarin\RUSU\StadiumStats\StadiumStats.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Xamarin\RUSU\StadiumStats\StadiumStats.iOS\obj\iPhone\Debug\optimized\
+C:\Xamarin\RUSU\StadiumStats\StadiumStats.iOS\obj\iPhone\Debug\StadiumStats.iOS.csprojAssemblyReference.cache
+C:\Xamarin\RUSU\StadiumStats\StadiumStats.iOS\obj\iPhone\Debug\StadiumStats.iOS.csproj.CoreCompileInputs.cache

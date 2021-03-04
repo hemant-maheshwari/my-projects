@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StadiumStats.View.AccountPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness" >
+                        <OnIdiom.Phone>40,40,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="LoginIcon.png" HeightRequest="60"  Margin="-5,-5,0,0" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="Account"  Margin="40,0,0,0" FontAttributes="Bold" FontSize="40" TextColor="Black" FontFamily="MS Gothic"/>
+                </StackLayout>
+                
+                <StackLayout x:Name="Welcome4" Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                    <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                    <Label Text="Edit your account information" TextColor="Black" FontSize="15" />
+                </StackLayout>
+                
+                <StackLayout x:Name="activitySpinnerAccountLayout" IsVisible="False" IsEnabled="False" VerticalOptions="CenterAndExpand">
+                    <ActivityIndicator x:Name="updateAccountLoader" Color="DarkOrange" IsRunning="False" IsEnabled="False" BackgroundColor="Transparent" IsVisible="False"/>
+                    <Label Text="Please wait..." TextColor="White" Margin="0,60,0,0" HorizontalTextAlignment="Center" FontSize="24" VerticalTextAlignment="End"/>
+                </StackLayout>
+                <StackLayout x:Name="updateLayout" IsVisible="True" IsEnabled="True" Margin="0,30,0,0" >
+                    <StackLayout>
+                        <Entry x:Name="entryAccFirstName" Placeholder="First Name" TextColor="Black" PlaceholderColor="LightGray"/>
+                        <Entry x:Name="entryAccLastName" Placeholder="Last Name" TextColor="Black" PlaceholderColor="LightGray"/>
+                        <Entry x:Name="entryAccEmail" Placeholder="Email" TextColor="Black" PlaceholderColor="LightGray" Keyboard="Email"/>
+                        <Entry x:Name="entryAccPassword" Placeholder="Password" TextColor="Black" PlaceholderColor="LightGray" IsPassword="True"/>
+                        <Entry x:Name="entryAccConfirmPassword" Placeholder="Confirm Password" TextColor="Black" PlaceholderColor="LightGray" IsPassword="True"/>
+                    </StackLayout>
+                    <StackLayout Margin="0,100,0,0">
+                        <Button x:Name="btnUpdateAccInfo" CornerRadius="5" BackgroundColor="LightGray" Text="Update Information" TextColor="Black" HorizontalOptions="Center" Clicked="updateUser"/>
+                        <Button x:Name="btnLogOut" CornerRadius="5" BackgroundColor="LightGray" Text="Log Out" TextColor="Black" HorizontalOptions="Center" Clicked="logOut"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,46 @@
+<body>
+<div id="expenses">
+  <div class="container">
+    <div id="padding-row">
+      <div id="expenses-row" class="row justify-content-center align-items-center">
+        <div id="expenses-column" class="col-md-8">
+          <div id="expenses-box" class="shadow-lg rounded mt-lg-5 pb-5">
+            <div class="text-center">
+              <h2 class="h2 mt-lg-3 primary-color-blue-text">Expenses</h2>
+            </div>
+            <hr class="rounded w-75 secondary-color-yellow-background">
+            <div class="row">
+              <div class="col offset-1">
+                <div class="expenses-padding col-sm-11">
+                  <div class="card bg-success mb-lg-5 mt-lg-3 shadow-sm">
+                    <div class="card-header">
+                      <p class="card-title text-white text-center">Income</p>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="text-center text-white">$ {{accountStatement.income}}</h1>
+                    </div>
+                    <div class="card-footer text-white small">
+                      <p>**Income is money you expect to receive.</p>
+                    </div>
+                  </div>
+                  <div class="card bg-danger mt-lg-5 mb-lg-4 shadow-sm">
+                    <div class="card-header">
+                      <p class="card-title text-white text-center">Expenses</p>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="text-center text-white">$ {{accountStatement.expense}}</h1>
+                    </div>
+                    <div class="card-footer text-white small">
+                      <p>**Expense is money you expect to pay out.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

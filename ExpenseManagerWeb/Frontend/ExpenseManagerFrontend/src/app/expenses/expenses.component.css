@@ -1,0 +1,16 @@
+#expenses #expenses-row #expenses-column #expenses-box {
+  margin-top: 10%;
+  max-width: 200%;
+  height: 100%;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#expenses #expenses-row #expenses-column #expenses-box #expenses-form {
+  padding: 2%;
+}
+
+.expenses-padding{
+  padding: 20px;
+}
+
+

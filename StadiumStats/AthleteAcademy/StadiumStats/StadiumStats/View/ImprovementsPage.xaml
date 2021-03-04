@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:chart="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:mm="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms" xmlns:shared="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms"
+             mc:Ignorable="d"
+             x:Class="StadiumStats.View.ImprovementsPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content> 
+        <ScrollView>
+        <StackLayout>
+            
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness" >
+                        <OnIdiom.Phone>40,40,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="LoginIcon.png" HeightRequest="60"  Margin="-5,-5,0,0" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="lblImproveHeader" Text="Improvements"  Margin="50,0,0,0" FontAttributes="Bold" FontSize="Title" TextColor="Black" FontFamily="MS Gothic"  />
+                </StackLayout>
+                <StackLayout Margin="0,0,0,15" Grid.Row="0" Grid.Column="0">
+                    <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                </StackLayout>
+
+                <StackLayout x:Name="athletePickerLayout" IsVisible="True" IsEnabled="True">
+                    <Picker x:Name="athletePicker" TextColor="White" Title="Select An Athlete To See Improvements" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemDisplayBinding="{Binding fullName}" SelectedIndexChanged="showImprovement"/>
+                </StackLayout>
+            
+             <StackLayout Margin="0,0,0,15" Grid.Row="0" Grid.Column="0">
+                    <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,0,0,20">
+                    <chart:ChartView x:Name="Chart1" HeightRequest="300" BackgroundColor="Transparent"/>
+                </StackLayout>
+            
+                <StackLayout Margin="0,0,0,15" Grid.Row="0" Grid.Column="0">
+                    <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                </StackLayout>
+
+                <StackLayout x:Name="picLayout1" IsVisible="True" IsEnabled="True">
+                    <Label Text="Drill 1:" TextColor="White" FontSize="Large"/>
+                    <Image x:Name="improvePic1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            
+                <StackLayout Margin="0,0,0,15" Grid.Row="0" Grid.Column="0">
+                    <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                </StackLayout>
+            
+                <StackLayout x:Name="picLayout2" IsVisible="True" IsEnabled="True">
+                    <Label Text="Drill 2:" TextColor="White" FontSize="Large"/>
+                    <Image x:Name="improvePic2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

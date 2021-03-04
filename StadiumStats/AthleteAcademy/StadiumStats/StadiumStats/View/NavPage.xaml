@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:StadiumStats.View"
+             mc:Ignorable="d"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"  BarBackgroundColor="White" BarTextColor="Black" SelectedTabColor="Black"  
+             x:Class="StadiumStats.View.NavPage"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <NavigationPage Title="Home" IconImageSource="homeIcon.png">
+        <x:Arguments>
+            <local:HomePage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Stats" IconImageSource="statsIcon.png">
+        <x:Arguments>
+            <local:StatsPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Improve" IconImageSource="improveIcon.png">
+        <x:Arguments>
+            <local:ImprovementsPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Account" IconImageSource="accountIcon.png">
+        <x:Arguments>
+            <local:AccountPage />
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>

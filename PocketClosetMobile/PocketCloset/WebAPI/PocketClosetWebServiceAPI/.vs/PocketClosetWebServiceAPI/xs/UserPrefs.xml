@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{A8965D68-2B29-463F-9653-8FA83CB97018}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PocketClosetWebServiceAPI/Handlers/UserDataHandler.cs">
+    <Files>
+      <File FileName="PocketClosetWebServiceAPI/Handlers/UserDataHandler.cs" Line="111" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.PocketClosetWebServiceAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/adriangallant/PocketCloset/SW301/WebAPI/PocketClosetWebServiceAPI/PocketClosetWebServiceAPI/Handlers/UserDataHandler.cs" relfile="PocketClosetWebServiceAPI/Handlers/UserDataHandler.cs" line="69" column="1" />
+      <Breakpoint file="/Users/adriangallant/PocketCloset/SW301/WebAPI/PocketClosetWebServiceAPI/PocketClosetWebServiceAPI/Handlers/UserDataHandler.cs" relfile="PocketClosetWebServiceAPI/Handlers/UserDataHandler.cs" line="94" column="1" />
+      <Breakpoint file="/Users/adriangallant/PocketCloset/SW301/WebAPI/PocketClosetWebServiceAPI/PocketClosetWebServiceAPI/Handlers/UserDataHandler.cs" relfile="PocketClosetWebServiceAPI/Handlers/UserDataHandler.cs" line="99" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

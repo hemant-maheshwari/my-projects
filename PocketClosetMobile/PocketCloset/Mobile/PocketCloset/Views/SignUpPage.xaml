@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PocketCloset.Views.SignUpPage">
+
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterLayout">
+
+            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+                <Image x:Name="LoginIcon" Aspect="AspectFit" Source="LoginIcon.png" Margin="-15,10,0, -20" HeightRequest="100"/>
+            </StackLayout>
+
+            <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness" >
+                        <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+                <StackLayout x:Name="activitySpinnerLayout" IsVisible="False" IsEnabled="False">
+                    <ActivityIndicator x:Name="signUpLoader" Color="White" IsRunning="False" IsEnabled="False" BackgroundColor="Transparent" IsVisible="False"/>
+                    <Label Text="Please wait..." TextColor="White" Margin="0,60,0,0" HorizontalTextAlignment="Center" FontSize="24" VerticalTextAlignment="End"/>
+                </StackLayout>
+                <StackLayout x:Name="signUpLayout">
+                    <Picker x:Name="pickerUserType" Title="Select a user type" TitleColor="LightGray" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                      <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                          <x:String>Store</x:String>
+                          <x:String>User</x:String>
+                        </x:Array>
+                      </Picker.ItemsSource>
+                    </Picker>
+                    <Picker x:Name="pickerGenderType" Title="Select your gender" TitleColor="LightGray" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                      <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                          <x:String>Male</x:String>
+                          <x:String>Female</x:String>
+                        </x:Array>
+                      </Picker.ItemsSource>
+                    </Picker>
+                    <StackLayout>
+                        <Entry x:Name="entryFirstName" Placeholder="First Name" PlaceholderColor="LightGray" TextColor="White"/>
+                        <Entry x:Name="entryLastName" Placeholder="Last Name" PlaceholderColor="LightGray" TextColor="White"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="lblDateofBirthday" Text="Date of Birth" TextColor="LightGray" HorizontalOptions="FillAndExpand" Margin="0,0,-120,0" VerticalTextAlignment="Center"/>
+                            <DatePicker x:Name="datePickerDOB" VerticalOptions="CenterAndExpand" Format="MM-dd-yyyy" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                        <Entry x:Name="entryEmail" Placeholder="Email" PlaceholderColor="LightGray" TextColor="White" Keyboard="Email"/>
+                        <Entry x:Name="entryUsername" Placeholder="Username" PlaceholderColor="LightGray" TextColor="White"/>
+                        <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" TextColor="White"/>
+                        <Entry x:Name="entryConfirmPassword" Placeholder="Confirm Password" IsPassword="True" PlaceholderColor="LightGray" TextColor="White"/>
+                        <Button x:Name="btnSignUp" Text="Sign Up" Clicked="verifyUserForm"/>
+                        <Button x:Name="btnSignIn" BorderColor="Transparent" BackgroundColor="Transparent" Text="Already have account? Sign In" FontSize="12" Clicked="goToLoginPage"/>
+                    </StackLayout>                
+                </StackLayout>
+                <StackLayout x:Name="secQuestionLayout" IsVisible="false" IsEnabled="False" >      
+                    <Entry x:Name="entrySecQuestion" Placeholder="Enter your own security question" PlaceholderColor="LightGray" TextColor="White"/>
+                    <Entry x:Name="entrySecQuestionAnswer" Placeholder="Enter your answer" PlaceholderColor="LightGray" TextColor="White"/>
+                    <Button x:Name="btnCreateSecQuestion" Text="Finish" Clicked="verifySecQuestionForm"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage> 

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketCloset.Views.FollowingPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Padding>
+                <OnIdiom x:TypeArguments="Thickness" >
+                    <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                    <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                </OnIdiom>
+            </StackLayout.Padding>
+
+            <StackLayout x:Name="activitySpinnerFollowingLayout" IsVisible="False" IsEnabled="False">
+                <ActivityIndicator x:Name="followingLoader" Color="DarkOrange" IsRunning="False" IsEnabled="False" BackgroundColor="Transparent" IsVisible="False"/>
+                <Label Text="Please wait..." TextColor="White" Margin="0,60,0,0" HorizontalTextAlignment="Center" FontSize="Title" VerticalTextAlignment="End"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="LoginIcon" Source="LoginIcon.png" HeightRequest="60"  Margin="0,0,0,0" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Following"  Margin="12,15,0,0" FontAttributes="Bold" FontSize="Title" TextColor="White" FontFamily="MS Gothic" VerticalOptions="CenterAndExpand"   />
+            </StackLayout>
+            <StackLayout x:Name="Welcome4" Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                <BoxView x:Name="boxViewFollowing" WidthRequest ="200" HeightRequest="2"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" x:Name="followingLayout"  IsVisible="True" IsEnabled="True" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill">
+                <ListView x:Name="followingListView" ItemTapped="followingListItemTapped" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ContentView>
+                                    <StackLayout>
+                                        <StackLayout Orientation="Vertical" Margin="0,0,0,20">
+                                                <Label x:Name="lblUserId" Text="{Binding userId}" IsVisible="False"/>
+                                                <Label x:Name="lblUserName" Text="{Binding userName}" TextColor="White" FontSize="Medium"/>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label x:Name="lblLirstName" Text="{Binding firstName}"  TextColor="White" FontSize="Small"/>
+                                                <Label x:Name="lblLastName" Text="{Binding lastName}"  TextColor="White" FontSize="Small"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ContentView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+            <StackLayout Padding="1">
+                    <Button BackgroundColor="DarkGray" Text="Back to Home Page" TextColor="White" FontSize="12" Clicked="goToHomePage"/>
+                </StackLayout>
+            </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

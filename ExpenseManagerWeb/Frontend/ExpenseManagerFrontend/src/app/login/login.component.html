@@ -1,0 +1,41 @@
+<body>
+  <div id="login">
+    <img class="center-image" src="assets/images/LoginIcon.png" alt="Expense Manager Logo">
+    <div class="container pb-5">
+      <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6">
+          <div id="login-box" class="col-md-12 shadow-lg rounded">
+            <form id="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+              <div class="form-group">
+                <label for="username" class="primary-color-blue-text">Username </label>
+                <input formControlName="username" type="text" name="username" id="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" required>
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password" class="primary-color-blue-text">Password </label>
+                <input formControlName="password" type="password" name="password" id="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" required>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+                <a routerLink="/forgot-password" class="text-sm-left text-info">Forgot your password?</a>
+                <!--<label for="remember-me" class="text-info float-right"><span>Remember me  </span><span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>-->
+              </div>
+              <div class="col text-center">
+                <button [disabled]="loading" type="submit" name="login-button" class="btn primary-color-blue-background text-white col-sm-10">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  Login
+                </button>
+                <br><br>
+                <div class="text-center">
+                  <label>Not a member?</label><a routerLink="/register" class="text-info text-center"> Sign up here!</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,89 @@
+<body>
+  <div id="register">
+    <img class="center-image" src="assets/images/LoginIcon.png" alt="Expense Manager Logo">
+    <div class="container">
+      <div id="register-row" class="row justify-content-center align-items-center">
+        <div id="register-column" class="col-md-6">
+          <div id="register-box" class="shadow-lg rounded">
+            <form id="register-form" [formGroup]="userRegisterForm" (ngSubmit)="onSubmit()" class="form">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="firstname" class="primary-color-blue-text"> First Name</label>
+                    <input formControlName="firstName" type="text" name="firstname" id="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && g.firstName.errors }" required>
+                    <div *ngIf="submitted && g.firstName.errors" class="invalid-feedback">
+                      <div *ngIf="g.firstName.errors.required">First Name is required</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="lastname" class="primary-color-blue-text"> Last Name</label>
+                    <input formControlName="lastName" type="text" name="lastname" id="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && g.lastName.errors }" required>
+                    <div *ngIf="submitted && g.lastName.errors" class="invalid-feedback">
+                      <div *ngIf="g.lastName.errors.required">Last Name is required</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="email" class="primary-color-blue-text"> Email</label>
+                    <input formControlName="email" type="text" name="email" id="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && g.email.errors }" placeholder="example@email.com" required>
+                    <div *ngIf="submitted && g.email.errors" class="invalid-feedback">
+                      <div *ngIf="g.email.errors.required">Enter a valid email</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="phone" class="primary-color-blue-text"> Phone Number </label>
+                    <input formControlName="phone" type="tel" id="phone" name="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && g.phone.errors }" placeholder="999999999" required>
+                    <div *ngIf="submitted && g.phone.errors" class="invalid-feedback">
+                      <div *ngIf="g.phone.errors.required">Enter a valid 10 digit phone number</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <hr id="border-sign-up" class="rounded secondary-color-yellow-background">
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label for="username" class="primary-color-blue-text"> Username</label>
+                    <input formControlName="username" type="text" name="username" id="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && g.username.errors }" required>
+                    <div *ngIf="submitted && g.username.errors" class="invalid-feedback">
+                      <div *ngIf="g.username.errors.required">Username is required</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password" class="primary-color-blue-text">Password </label>
+                <input formControlName="password" type="password" name="password" id="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && g.password.errors }" required>
+                <div *ngIf="submitted && g.password.errors" class="invalid-feedback">
+                  <div *ngIf="g.password.errors.required">Password must be at least 6 characters long</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword" class="primary-color-blue-text"> Confirm Password </label>
+                <input formControlName="confirmPassword" type="password" name="confirmPassword" id="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && g.confirmPassword.errors }" required>
+                <div *ngIf="submitted && g.confirmPassword.errors" class="invalid-feedback">
+                  <div *ngIf="g.confirmPassword.errors.required">Must match password</div>
+                </div>
+              </div>
+              <div class="col text-center">
+                <button [disabled]="loading" type="submit" class="btn primary-color-blue-background text-white col-sm-10 mt-3">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  Register
+                </button>
+                <br><br>
+                <div class="text-center">
+                  <label>Already have an account?</label><a routerLink="/" class="text-center text-info"> Back to Login</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

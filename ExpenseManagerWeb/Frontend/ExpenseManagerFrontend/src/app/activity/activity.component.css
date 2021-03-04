@@ -1,0 +1,14 @@
+#activity #activity-row #activity-column #activity-box {
+  margin-top: 10%;
+  max-width: 200%;
+  height: 100%;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#activity #activity-row #activity-column #activity-box #activity-form {
+  padding: 2%;
+}
+
+.activity-bottom-spacing {
+  padding-bottom: 20%;
+}

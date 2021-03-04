@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PocketCloset.Views.AddPostPage">
+
+
+    <ContentPage.Content>
+
+        <ScrollView>
+                <StackLayout x:Name="addpostLayout" Padding="2">
+                    <StackLayout Orientation="Horizontal">
+                        <Image x:Name="Icon" Source="LoginIcon.png" HeightRequest="60"  Margin="0,0,0,0" Grid.Row="0" Grid.Column="0"/>
+                        <Label Text="Create A Post"  Margin="12,15,0,0" FontAttributes="Bold" FontSize="Large" TextColor="White" FontFamily="MS Gothic"  />
+                    </StackLayout>
+                    <StackLayout x:Name="Welcome5" Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                        <BoxView x:Name="boxViewFollowing3" WidthRequest ="200" HeightRequest="2"/>
+                    </StackLayout>
+                    <StackLayout.Padding>
+                        <OnIdiom x:TypeArguments="Thickness" >
+                            <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                            <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                        </OnIdiom>
+                    </StackLayout.Padding>
+
+                    <Picker x:Name="pickerCLothType" Title="Cloth Type" TitleColor="LightGray" TextColor="White">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Shirt</x:String>
+                                <x:String>Pant</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <StackLayout>
+                        <Button Text="Pick Photo" Clicked="pickPhotoButton" />
+                        <Image x:Name="pickPhotoImage" Source="pickPhotoButton"/>
+
+                    </StackLayout>
+
+                    
+                        <Entry x:Name="entryColor" Placeholder="Color" PlaceholderColor="LightGray" TextColor="White"/>
+                        <Entry x:Name="entryMaterial" Placeholder="Material" PlaceholderColor="LightGray" TextColor="White"/>
+                    
+
+                    <Picker x:Name="pickerSeason" Title="Season" TitleColor="LightGray" TextColor="White">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Winter</x:String>
+                                <x:String>Spring</x:String>
+                                <x:String>Summer</x:String>
+                                <x:String>Fall</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <StackLayout>
+                        <Entry x:Name="entryPrice" Placeholder="Price" PlaceholderColor="LightGray" TextColor="White"/>
+                        <Entry x:Name="entryUrl" Placeholder="URL" PlaceholderColor="LightGray" TextColor="White"/>
+                        <Label Text="Is Model Present" FontSize="Medium" TextColor="White"/>
+                        <Switch x:Name="switchModel" IsToggled="True" OnColor="DarkOrange"/>
+                        <Button x:Name="btnCreatePost" Text="CreatePost" Clicked="createPost" />
+                        <Button x:Name="btnCancelPost" Text="Cancel Post Creation" Clicked="cancelPost" />
+
+                </StackLayout>
+
+
+
+                </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

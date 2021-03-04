@@ -1,0 +1,895 @@
+10/06/2019 08:44:17 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 58)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2327>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [17] 'Entry1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:28 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 53)
+  Return = 0 (S_GOOD), Returned Ticket = 3200
+  Data =
+        <L [3]
+          <U4 2332>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [12] 'R1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:35 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 53)
+  Return = 0 (S_GOOD), Returned Ticket = 3200
+  Data =
+        <L [3]
+          <U4 2333>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [12] 'R1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:38 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 50)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2334>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [9] 'Station1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:38 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 3200
+
+10/06/2019 08:44:38 (App 21263) SdrMessageGet(Ticket = 3200, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:44:38 (App 21263) SdrTicketDrop(Ticket = 3200), Return = 0 (S_GOOD)
+
+10/06/2019 08:44:38 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 960
+
+10/06/2019 08:44:38 (App 21263) SdrMessageGet(Ticket = 960, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:44:38 (App 21263) SdrTicketDrop(Ticket = 960), Return = 0 (S_GOOD)
+
+10/06/2019 08:44:38 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+
+10/06/2019 08:44:49 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 50)
+  Return = 0 (S_GOOD), Returned Ticket = 3200
+  Data =
+        <L [3]
+          <U4 2337>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [9] 'Station1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:54 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2338>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:52 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 3200
+
+10/06/2019 08:44:52 (App 21263) SdrMessageGet(Ticket = 3200, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:44:52 (App 21263) SdrTicketDrop(Ticket = 3200), Return = 0 (S_GOOD)
+
+10/06/2019 08:44:52 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 960
+
+10/06/2019 08:44:52 (App 21263) SdrMessageGet(Ticket = 960, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+
+10/06/2019 08:44:55 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 3200
+  Data =
+        <L [3]
+          <U4 2340>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+
+10/06/2019 08:44:56 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 47)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2341>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [6] 'L11'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:57 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 47)
+  Return = 0 (S_GOOD), Returned Ticket = 384
+  Data =
+        <L [3]
+          <U4 2343>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [6] 'L11'>
+              >
+            >
+          >
+        >.
+
+
+
+10/06/2019 08:44:58 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 1216
+  Data =
+        <L [3]
+          <U4 2344>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:59 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 448
+  Data =
+        <L [3]
+          <U4 2348>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+
+10/06/2019 08:45:00 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 44)
+  Return = 0 (S_GOOD), Returned Ticket = 3200
+  Data =
+        <L [3]
+          <U4 2349>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [3] 'Station2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:45:02 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 44)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2350>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [3] 'Station2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:45:03 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 1216
+  Data =
+        <L [3]
+          <U4 2351>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:58 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 448
+
+10/06/2019 08:44:58 (App 21263) SdrMessageGet(Ticket = 448, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:44:58 (App 21263) SdrTicketDrop(Ticket = 448), Return = 0 (S_GOOD)
+
+10/06/2019 08:44:58 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 3200
+
+10/06/2019 08:44:58 (App 21263) SdrMessageGet(Ticket = 3200, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:45:04 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 1920
+  Data =
+        <L [3]
+          <U4 2352>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:44:58 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 960
+
+10/06/2019 08:44:58 (App 21263) SdrMessageGet(Ticket = 960, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:44:58 (App 21263) SdrTicketDrop(Ticket = 960), Return = 0 (S_GOOD)
+
+10/06/2019 08:44:58 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 1216
+
+10/06/2019 08:44:58 (App 21263) SdrMessageGet(Ticket = 1216, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:44:58 (App 21263) SdrTicketDrop(Ticket = 1216), Return = 0 (S_GOOD)
+
+10/06/2019 08:44:58 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+10/06/2019 08:45:06 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 47)
+  Return = 0 (S_GOOD), Returned Ticket = 1216
+  Data =
+        <L [3]
+          <U4 2353>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-001'>
+                <A [6] 'L11'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:45:30 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 58)
+  Return = 0 (S_GOOD), Returned Ticket = 4032
+  Data =
+        <L [3]
+          <U4 2374>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [17] 'Entry2'>
+              >
+            >
+          >
+        >.
+
+
+10/06/2019 08:45:40 (App 21313) SdrMessageGet(Ticket = 960, Data length = 96)
+  Return = 0 (S_GOOD)
+  Data =
+        <L [5]
+          <U1 0>
+          <U4 23>
+          <A >
+          <A [11] 'MoveReticle'>
+          <L [3]
+            <L [2]
+              <A [6] 'PortID'>
+              <U1 101>
+            >
+            <L [2]
+              <A [10] 'Reticle ID'>
+              <A [11] 'RET-LOT-002'>
+            >
+            <L [2]
+              <A [19] 'DestinationLocation'>
+              <A [3] 'Station21'>
+            >
+          >
+        >.
+
+10/06/2019 08:45:41 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 58)
+  Return = 0 (S_GOOD), Returned Ticket = 4032
+  Data =
+        <L [3]
+          <U4 2378>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [17] 'Entry2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:45:41 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 960
+
+10/06/2019 08:45:41 (App 21263) SdrMessageGet(Ticket = 960, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:45:41 (App 21263) SdrTicketDrop(Ticket = 960), Return = 0 (S_GOOD)
+
+10/06/2019 08:45:43 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 53)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2379>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [12] 'R1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:45:41 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 1280
+
+10/06/2019 08:45:41 (App 21263) SdrMessageGet(Ticket = 1280, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:45:41 (App 21263) SdrTicketDrop(Ticket = 1280), Return = 0 (S_GOOD)
+
+10/06/2019 08:45:41 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+10/06/2019 08:45:46 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 4032
+
+10/06/2019 08:45:46 (App 21263) SdrMessageGet(Ticket = 4032, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:45:46 (App 21263) SdrTicketDrop(Ticket = 4032), Return = 0 (S_GOOD)
+
+10/06/2019 08:45:46 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 960
+
+10/06/2019 08:45:46 (App 21263) SdrMessageGet(Ticket = 960, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:45:46 (App 21263) SdrTicketDrop(Ticket = 960), Return = 0 (S_GOOD)
+
+10/06/2019 08:45:46 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+10/06/2019 08:45:48 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 53)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2380>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [12] 'R1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:45:50 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 50)
+  Return = 0 (S_GOOD), Returned Ticket = 4032
+  Data =
+        <L [3]
+          <U4 2381>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [9] 'Station1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:45:51 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 960
+
+10/06/2019 08:45:51 (App 21263) SdrMessageGet(Ticket = 960, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:45:51 (App 21263) SdrTicketDrop(Ticket = 960), Return = 0 (S_GOOD)
+
+10/06/2019 08:45:51 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 4032
+
+10/06/2019 08:45:51 (App 21263) SdrMessageGet(Ticket = 4032, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+
+10/06/2019 08:46:02 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 50)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2384>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [9] 'Station1'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:04 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 4032
+  Data =
+        <L [3]
+          <U4 2385>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:06 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 960
+
+10/06/2019 08:46:06 (App 21263) SdrMessageGet(Ticket = 960, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:06 (App 21263) SdrTicketDrop(Ticket = 960), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:06 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 4032
+
+10/06/2019 08:46:06 (App 21263) SdrMessageGet(Ticket = 4032, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:06 (App 21263) SdrTicketDrop(Ticket = 4032), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:06 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+10/06/2019 08:46:09 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2387>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S3F17 W=1, Data length = 40, Returned Ticket = 3200
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 4032
+
+10/06/2019 08:46:09 (App 21263) SdrMessageGet(Ticket = 4032, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:09 (App 21263) SdrTicketDrop(Ticket = 4032), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+10/06/2019 08:46:09 (App 21313) SdrMessageGet(Ticket = 3200, Data length = 40)
+  Return = 0 (S_GOOD)
+  Data =
+        <L [5]
+          <U1 0>
+          <A [11] 'PodComplete'>
+          <A [15] 'POD RET-LOT-002'>
+          <U1 101>
+          <L>
+        >.
+10/06/2019 08:46:11 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 47)
+  Return = 0 (S_GOOD), Returned Ticket = 4032
+  Data =
+        <L [3]
+          <U4 2388>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [6] 'L21'>
+              >
+            >
+          >
+        >.
+
+
+10/06/2019 08:46:12 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 47)
+  Return = 0 (S_GOOD), Returned Ticket = 1792
+  Data =
+        <L [3]
+          <U4 2390>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [6] 'L21'>
+              >
+            >
+          >
+        >.
+
+
+10/06/2019 08:46:13 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 960
+  Data =
+        <L [3]
+          <U4 2391>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:14 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 128
+  Data =
+        <L [3]
+          <U4 2395>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 1792
+
+10/06/2019 08:46:09 (App 21263) SdrMessageGet(Ticket = 1792, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:09 (App 21263) SdrTicketDrop(Ticket = 1792), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 960
+
+10/06/2019 08:46:09 (App 21263) SdrMessageGet(Ticket = 960, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:09 (App 21263) SdrTicketDrop(Ticket = 960), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 1280
+
+10/06/2019 08:46:09 (App 21263) SdrMessageGet(Ticket = 1280, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:09 (App 21263) SdrTicketDrop(Ticket = 1280), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 3200
+
+10/06/2019 08:46:09 (App 21263) SdrMessageGet(Ticket = 3200, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:09 (App 21263) SdrTicketDrop(Ticket = 3200), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 4032
+
+10/06/2019 08:46:09 (App 21263) SdrMessageGet(Ticket = 4032, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:09 (App 21263) SdrTicketDrop(Ticket = 4032), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:09 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+10/06/2019 08:46:16 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 44)
+  Return = 0 (S_GOOD), Returned Ticket = 4032
+  Data =
+        <L [3]
+          <U4 2396>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [3] 'Station2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:18 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 44)
+  Return = 0 (S_GOOD), Returned Ticket = 3200
+  Data =
+        <L [3]
+          <U4 2397>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [3] 'Station2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:12 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 128
+
+10/06/2019 08:46:12 (App 21263) SdrMessageGet(Ticket = 128, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:12 (App 21263) SdrTicketDrop(Ticket = 128), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:12 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 4032
+
+10/06/2019 08:46:12 (App 21263) SdrMessageGet(Ticket = 4032, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:12 (App 21263) SdrTicketDrop(Ticket = 4032), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:12 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S14F1 W=1, Data length = 41, Returned Ticket = 1024
+
+10/06/2019 08:46:12 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+
+10/06/2019 08:46:20 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 4032
+  Data =
+        <L [3]
+          <U4 2398>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:22 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 56)
+  Return = 0 (S_GOOD), Returned Ticket = 3200
+  Data =
+        <L [3]
+          <U4 2399>
+          <U4 1235>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [15] 'R2'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:12 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 4032
+
+10/06/2019 08:46:12 (App 21263) SdrMessageGet(Ticket = 4032, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:12 (App 21263) SdrTicketDrop(Ticket = 4032), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:12 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)
+
+10/06/2019 08:46:25 (App 21263) SdrRequest(ID = 0, T14U11 W=1, Data length = 47)
+  Return = 0 (S_GOOD), Returned Ticket = 4032
+  Data =
+        <L [3]
+          <U4 2400>
+          <U4 1234>
+          <L
+            <L [2]
+              <U4 10>
+              <L [2]
+                <A [11] 'RET-LOT-002'>
+                <A [6] 'L21'>
+              >
+            >
+          >
+        >.
+
+10/06/2019 08:46:17 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 3200
+
+10/06/2019 08:46:17 (App 21263) SdrMessageGet(Ticket = 3200, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:17 (App 21263) SdrTicketDrop(Ticket = 3200), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:17 (App 21263) SdrIdPoll(ID = 0), Return = 1 (S_POLL)
+  S6F12 W=0, Data length = 3, Returned Ticket = 4032
+
+10/06/2019 08:46:17 (App 21263) SdrMessageGet(Ticket = 4032, Data length = 3)
+  Return = 0 (S_GOOD)
+  Data =
+        <B 00>.
+
+10/06/2019 08:46:17 (App 21263) SdrTicketDrop(Ticket = 4032), Return = 0 (S_GOOD)
+
+10/06/2019 08:46:17 (App 21263) SdrIdPoll(ID = 0), Return = 0 (F_POLL)

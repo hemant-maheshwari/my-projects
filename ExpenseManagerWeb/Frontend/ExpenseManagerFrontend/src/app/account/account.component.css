@@ -1,0 +1,11 @@
+#account #account-row #account-column #account-box {
+  margin-top: 10%;
+  max-width: 200%;
+  height: 100%;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#account #account-row #account-column #account-box #account-form {
+  padding: 2%;
+}
+

@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+.primary-color-blue-text{
+  color: #01233f;
+}
+
+.primary-color-blue-background{
+  background-color: #01233f;
+}
+
+.secondary-color-yellow-text{
+  color: #f2af58;
+}
+
+.secondary-color-yellow-background{
+  background-color: #f2af58;
+}
+
+.third-color-gray-text{
+  color: #51525e;
+}
+
+.third-color-gray-background{
+  background-color: #51525e;
+}
+
+.center-image{
+  margin-top: 2.8%;
+  margin-bottom: -1%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+.right-align{
+  position: absolute;
+  right: 0;
+}
+
+#border-box{
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+#padding-row{
+  padding-top: 5%;
+}
+
+.button-align-right{
+  float: right;
+}
+
+footer{
+  position: relative;
+  bottom: 0;
+}
+
+html, body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

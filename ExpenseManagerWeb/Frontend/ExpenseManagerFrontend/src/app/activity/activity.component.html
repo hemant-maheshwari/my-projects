@@ -1,0 +1,56 @@
+<body>
+<div id="activity">
+  <div class="container">
+    <div id="padding-row">
+      <div id="activity-row" class="row justify-content-center align-items-center pb-lg-5 mb-lg-5">
+        <div id="activity-column" class="col-md-8">
+          <div id="activity-box" class="shadow-lg rounded mt-lg-5 pb-5 mb-lg-5">
+            <div class="text-center">
+              <h2 class="h2 mt-lg-3 primary-color-blue-text">Activity</h2>
+            </div>
+            <hr class="rounded w-75 secondary-color-yellow-background">
+            <div class="d-flex justify-content-center center-image pt-lg-5 mt-lg-5 mb-lg-5 pb-lg-5" *ngIf="loadingActivity">
+              <div class="spinner-border pb-lg-5" role="status" style="width: 3rem; height: 3rem;">
+              </div>
+            </div>
+            <div *ngIf="!checkActivityLength() && !loadingActivity">
+              <br><br><br><br>
+              <h2 class="text-center">Looks like you don't have any activity :(</h2>
+              <h4 class="text-center">Make some transactions!</h4>
+              <br><br><br><br>
+              <div class="pb-5 row">
+                <div class="col text-center">
+                  <button routerLink="/transaction" class="btn primary-color-blue-background text-white">Add Transaction</button>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="checkActivityLength()">
+              <div class="row activity-bottom-spacing">
+                <div class="col-sm-8 offset-2">
+                  <table class="table table-striped table-bordered shadow-lg table-hover rounded"
+                         style="font-family: Courier, serif;">
+                    <tbody>
+                      <tr *ngFor="let record of activities"
+                          [ngClass]="{'table-danger': record.type == 'Expense', 'table-success': record.type == 'Income'}">
+                        <td><span class="text-lg-left" style="font-size: 1.3em;">{{record.title}}</span>
+                          <br>
+                          $ {{record.amount}}
+                        </td>
+                        <td>
+                          <span class="figure-caption float-right">{{record.type}}</span>
+                          <br>
+                          <span class="float-right" style="vertical-align: center;">{{record.dateCreated}}</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

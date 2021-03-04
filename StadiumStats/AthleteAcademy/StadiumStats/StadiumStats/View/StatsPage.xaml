@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="StadiumStats.View.StatsPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness" >
+                        <OnIdiom.Phone>40,40,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="LoginIcon.png" HeightRequest="60"  Margin="-5,-5,0,0" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="lblStatsHeader" Text=" Enter Stats"  Margin="50,0,0,0" FontAttributes="Bold" FontSize="Title" TextColor="Black" FontFamily="MS Gothic"  />
+                </StackLayout>
+
+                <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                    <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                </StackLayout>
+                
+                <StackLayout x:Name="athletePickerLayout" IsVisible="True" IsEnabled="True">
+                        <Picker x:Name="athletePicker" TextColor="White" Title="Select An Athlete to Enter Stats" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemDisplayBinding="{Binding fullName}" SelectedIndexChanged="showAthleteStats"/>
+                    </StackLayout>
+
+                    <StackLayout x:Name="playerStatsLayout" Orientation="Vertical" IsEnabled="False" IsVisible="False" >
+                        
+                        <Label Text="Kick" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="kickOptions" Orientation="Vertical" HorizontalOptions="Center">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Precision" FontSize="Medium"/>  
+                            <Button x:Name="kpGood" Text="Good" Clicked="kickPrecisionGood"/>
+                            <Button x:Name="kpBad" Text="Bad" Clicked="kickPrecisionBad"/>
+                            </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="35,0,0,0">
+                            <Label Text="Ease" FontSize="Medium"/>
+                            <Button x:Name="keGood" Text="Good" Clicked="kickEaseGood"/>
+                            <Button x:Name="keBad" Text="Bad" Clicked="kickEaseBad"/>
+                        </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="HeadBall" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="headballOptions" Orientation="Vertical" HorizontalOptions="Center" >
+                            <StackLayout Orientation="Horizontal" Margin="0,0,0,0" >
+                                <Label Text="Precision" FontSize="Medium"/>
+                            <Button x:Name="hpGood" Text="Good" Clicked="headballPrecisionGood" />
+                            <Button x:Name="hpBad" Text="Bad" Clicked="headballPrecisionBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="-30,0,0,0">
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="hcGood" Text="Good" Clicked="headballCoordinationGood"/>
+                            <Button x:Name="hcBad" Text="Bad" Clicked="headballCoordinationGood"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Throw-In" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="throwinOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Text="Precision" FontSize="Medium"/>
+                            <Button x:Name="tpGood" Text="Good" Clicked="throwInPrecisionGood"/>
+                            <Button x:Name="tpBad" Text="Bad" Clicked="throwInPrecisionBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="-30,0,0,0">
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="tcGood" Text="Good" Clicked="throwInCoordinationGood"/>
+                            <Button x:Name="tcBad" Text="Bad" Clicked="throwInCoordinationBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Trap" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="trapOptions" Orientation="Vertical" HorizontalOptions="Center" >
+                            <StackLayout Orientation="Horizontal" Margin="-30,0,0,0" >
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="trcGood" Text="Good" Clicked="trapCoordinationGood"/>
+                            <Button x:Name="trcBad" Text="Bad" Clicked="trapCoordinationBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="33,0,0,0">
+                                <Label Text="Ease" FontSize="Medium"/>
+                            <Button x:Name="treGood" Text="Good" Clicked="trapEasinessGood"/>
+                            <Button x:Name="treBad"  Text="Bad" Clicked="trapEasinessBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Tackling" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="tacklingOptions" Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal" Margin="42,0,0,0" >
+                                <Label Text="Precision" FontSize="Medium"/>
+                            <Button x:Name="tacpGood" Text="Good" Clicked="tacklingPrecisionGood"/>
+                            <Button x:Name="tacpBad" Text="Bad" Clicked="tacklingPrecisionBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="53,0,0,0">
+                                <Label Text="Rapidity" FontSize="Medium"/>
+                            <Button x:Name="tacrGood" Text="Good" Clicked="tacklingRapidityGood"/>
+                            <Button x:Name="tacrBad" Text="Bad" Clicked="tacklingRapidityBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Dribbling" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="dribblingOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="-30,0,0,0" >
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="pdcGood" Text="Good" Clicked="playerDribblingCoordinationGood"/>
+                            <Button x:Name="pdcBad" Text="Bad" Clicked="playerDribblingCoordinationBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="33,0,0,0">
+                                <Label Text="Ease" FontSize="Medium"/>
+                            <Button x:Name="pdeGood" Text="Good" Clicked="playerDribblingEasinessGood"/>
+                            <Button x:Name="pdeBad" Text="Bad" Clicked="playerDribblingEasinessBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="FootWork" FontSize="Large" TextColor="White" />
+                        <StackLayout x:Name="footworkOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="10,0,0,0" >
+                                <Label Text="Fluency" FontSize="Medium"/>
+                            <Button x:Name="fwfGood" Text="Good" Clicked="footworkFluencyGood"/>
+                            <Button x:Name="fwfBad" Text="Bad" Clicked="footworkFluencyBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="-30,0,0,0">
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="fwcGood" Text="Good" Clicked="footworkCoordinationGood"/>
+                            <Button x:Name="fwcBad" Text="Bad" Clicked="footworkCoordinationBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Ball Protection" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="ballprotectionOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="-30,0,0,0">
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="bpcGood" Text="Good" Clicked="ballProtectionCoordinationGood"/>
+                            <Button x:Name="bpcBad" Text="Bad" Clicked="ballProtectionCoordinationBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                                <Label Text="Rapidity" FontSize="Medium"/>
+                            <Button x:Name="bprGood" Text="Good" Clicked="ballProtectionRapidityGood"/>
+                            <Button x:Name="bprBad" Text="Bad" Clicked="ballProtectionRapidityBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+                        <Button x:Name="btnAddPlayerStats" CornerRadius="50" BackgroundColor="LightBlue" Text="Submit Stats" TextColor="Black" Margin="0,10,0,10" HorizontalOptions="Center" HeightRequest="40" Clicked="playerStatSave"/>
+                    </StackLayout>
+                    
+                    <!--Goalie Layout-->
+                
+                    <StackLayout x:Name="goalieStatsLayout" Orientation="Vertical" IsEnabled="False" IsVisible="False">
+                        
+                        <Label Text="Ball Catching" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="ballCatchingOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" >
+                                <Label Text="Precision" FontSize="Medium"/>
+                            <Button x:Name="bcpGood" Text="Good" Clicked="ballCatchingPrecisionGood" />
+                            <Button x:Name="bcpBad" Text="Bad" Clicked="ballCatchingPrecisionBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="-30,0,0,0">
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="bccGood" Text="Good" Clicked="ballCatchingCoordinationGood" />
+                            <Button x:Name="bccBad" Text="Bad" Clicked="ballCatchingCoordinationBad" />
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Plunge" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="plungeOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" >
+                                <Label Text="Precision" FontSize="Medium"/>
+                            <Button x:Name="ppGood" Text="Good" Clicked="plungePrecisionGood" />
+                            <Button x:Name="ppBad" Text="Bad" Clicked="plungePrecisionBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                                <Label Text="Rapidity" FontSize="Medium"/>
+                            <Button x:Name="prGood" Text="Good" Clicked="plungeRapidityGood"/>
+                            <Button x:Name="prBad" Text="Bad" Clicked="plungeRapidityBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Boxing Ball" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="boxinBallOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="8,0,0,0" >
+                                <Label Text="Fluency" FontSize="Medium"/>
+                            <Button x:Name="bbfGood" Text="Good" Clicked="boxingBallFluencyGood"/>
+                            <Button x:Name="bbfBad" Text="Bad" Clicked="boxingBallFluencyBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="30,0,0,0">
+                                <Label Text="Ease" FontSize="Medium"/>
+                            <Button x:Name="bbeGood" Text="Good" Clicked="boxingBallEaseGood"/>
+                            <Button x:Name="bbeBad" Text="Bad" Clicked="boxingBallEaseBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Diverting Ball" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="divertingBallOptions" Orientation="Vertical" HorizontalOptions="Center" >
+                            <StackLayout Orientation="Horizontal" Margin="-35,0,0,0" >
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="dbcGood" Text="Good" Clicked="divertingBallCoordinationGood"/>
+                            <Button x:Name="dbcBad" Text="Bad" Clicked="divertingBallCoordinationBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="30,0,0,0">
+                                <Label Text="Ease" FontSize="Medium"/>
+                            <Button x:Name="dbeGood" Text="Good" Clicked="divertingBallEaseGood"/>
+                            <Button x:Name="dbeBad" Text="Bad" Clicked="divertingBallEaseBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Hand Throwing" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="handThrowingOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="-5,0,0,0" >
+                                <Label Text="Precision" FontSize="Medium"/>
+                            <Button x:Name="htpGood" Text="Good" Clicked="handThrowingPrecisionGood"/>
+                            <Button x:Name="htpBad" Text="Bad" Clicked="handThrowingPrecisionBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="-33,0,0,0">
+                                <Label Text="Coordination" FontSize="Medium"/>
+                            <Button x:Name="htcGood" Text="Good" Clicked="handThrowingCoordinationGood"/>
+                            <Button x:Name="htcBad" Text="Bad" Clicked="handThrowingCoordinationBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Blocking" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="blockingOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="-5,0,0,0" >
+                                <Label Text="Precision" FontSize="Medium"/>
+                            <Button x:Name="bpGood" Text="Good" Clicked="blockingPrecisionGood"/>
+                            <Button x:Name="bpBad" Text="Bad" Clicked="blockingPrecisionBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="5,0,0,0">
+                                <Label Text="Rapidity" FontSize="Medium"/>
+                            <Button x:Name="brGood" Text="Good" Clicked="blockingRapidityGood"/>
+                            <Button x:Name="brBad" Text="Bad" Clicked="blockingRapidityBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Dribbling" FontSize="Large" TextColor="White" />
+                        <StackLayout x:Name="goalieDribblingOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="5,0,0,0" >
+                                <Label Text="Fluency" FontSize="Medium"/>
+                            <Button x:Name="gdfGood" Text="Good" Clicked="goalieDribblingFluencyGood"/>
+                            <Button x:Name="gdfBad" Text="Bad" Clicked="goalieDribblingFluencyBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="28,0,0,0">
+                                <Label Text="Ease" FontSize="Medium"/>
+                            <Button x:Name="gdeGood" Text="Good" Clicked="goalieDribblingEaseGood"/>
+                            <Button x:Name="gdeBad" Text="Bad" Clicked="goalieDribblingEaseBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Label Text="Ball Kick" FontSize="Large" TextColor="White"/>
+                        <StackLayout x:Name="ballKickOptions" Orientation="Vertical" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Margin="-10,0,0,0" >
+                                <Label Text="Precision" FontSize="Medium"/>
+                            <Button x:Name="bkpGood" Text="Good" Clicked="ballKickPrecisionGood"/>
+                            <Button x:Name="bkpBad" Text="Bad" Clicked="ballKickPrecisionBad"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="3,0,0,0">
+                                <Label Text="Fluency" FontSize="Medium"/>
+                            <Button x:Name="bkfGood" Text="Good" Clicked="ballKickFluencyGood"/>
+                            <Button x:Name="bkfBad" Text="Bad" Clicked="ballKickFluencyBad"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,5" Grid.Row="0" Grid.Column="0">
+                            <BoxView Color="Black" WidthRequest ="200" HeightRequest="2"/>
+                        </StackLayout>
+
+                        <Button x:Name="btnAddGoalieStats" CornerRadius="50" BackgroundColor="LightBlue" Text="Submit Stats" TextColor="Black" Margin="0,10,0,10" HorizontalOptions="Center" HeightRequest="40" Clicked="goalieStatSave"/>
+                    </StackLayout>
+
+                
+                <StackLayout x:Name="activitySpinnerLayout" IsEnabled="False" IsVisible="False">
+                    <ActivityIndicator x:Name="activitySpinner" Color="DarkOrange" IsRunning="False" IsVisible="False" IsEnabled="False"/>
+                    <Label Text="Please wait..." TextColor="White" Margin="0,60,0,0" HorizontalTextAlignment="Center" FontSize="24" VerticalTextAlignment="End"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
